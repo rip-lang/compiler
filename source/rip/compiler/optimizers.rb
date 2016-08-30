@@ -4,3 +4,4 @@ module Rip::Compiler
 end
 
 require_relative './optimizers/lift_interpolation'
+require_relative './optimizers/lift_string'

@@ -4,7 +4,8 @@ module Rip
   module Compiler
     def self.optimize(tree)
       [
-        Rip::Compiler::Optimizers::LiftInterpolation
+        Rip::Compiler::Optimizers::LiftInterpolation,
+        Rip::Compiler::Optimizers::LiftString
       ].inject(tree) do |memo, optimizer|
         optimizer.apply(memo)
       end
